@@ -32,7 +32,6 @@ export default new Vuex.Store({
   },
   getters: {
     getBookmarks: state => state.bookmarks,
-    getSelectedBookmark: state => state.selectedBookmark,
   },
   modules: {
   },

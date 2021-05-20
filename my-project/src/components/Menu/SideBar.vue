@@ -3,7 +3,7 @@
     <button class="main-btn" @click.stop="showInput=true">
       Добавить закладку
     </button>
-    <form name="" v-if="showInput" onsubmit="return false">
+    <form name="" v-if="showInput" @submit.prevent>
       <h2><b>Добавить закладку</b></h2>
       <p><b>Название закладки:</b>
         <input v-model="newName" type="text" size="40">
@@ -28,7 +28,7 @@ import { mapMutations, mapGetters } from 'vuex';
 export default {
   name: 'SideBar',
   computed: {
-    ...mapGetters(['getSelectedBookmark', 'getBookmarks']),
+    ...mapGetters(['getBookmarks']),
     isButtonDisabled() {
       return !!(this.newName === '' || this.newLink === '');
     },

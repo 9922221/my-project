@@ -11,7 +11,7 @@
     </div>
     <div class="back-dialog" v-if="showInput">
       <div class="form">
-        <form name="" v-if="showInput" onsubmit="return false">
+        <form name="" v-if="showInput" @submit.prevent>
           <h2><b>Изменить закладку</b></h2>
           <p><b>Название закладки:</b>
             <input v-model="editedName" type="text" size="40">
