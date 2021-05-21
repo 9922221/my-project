@@ -5,7 +5,7 @@
       <ul id="example-1">
         <li v-for="item in getBookmarks" :key="item.name">
           <button class='btn' @click="selectBookmark(item)">{{'\u{FE19}'}}</button>
-          <a class="link" :href="item.link" > {{ item.name +' link/ ' + item.link }} </a>
+          <a :href="item.link" > {{ item.name +' link/ ' + item.link }} </a>
         </li>
       </ul>
     </div>
@@ -130,9 +130,6 @@ export default {
 }
 .btn:hover { background: rgb(139, 139, 139); }
 .btn:active { background: rgb(71, 71, 71); }
-.link {
-  cursor: pointer
-}
 li {
   background: #efefef;
   display: block;
