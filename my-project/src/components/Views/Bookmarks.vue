@@ -40,7 +40,7 @@ import SideBar from '../Menu/SideBar';
 export default {
   name: 'BookMark',
   computed: {
-    ...mapGetters(['getSelectedBookmark', 'getBookmarks']),
+    ...mapGetters(['getBookmarks']),
     isEditButtonDisabled() {
       return !!(this.editedName === '' || this.editedLink === '');
     },
