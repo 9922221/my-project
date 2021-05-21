@@ -77,10 +77,8 @@ export default {
         link: this.editedLink,
         id: this.editedId,
       };
-      if (this.newName && this.newLink) {
+      if (this.editedName && this.editedLink) {
         this.setSelectedBookmark(data);
-        // eslint-disable-next-line
-        console.log(data);
       }
       this.clearForm();
     },
